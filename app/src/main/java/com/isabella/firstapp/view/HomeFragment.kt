@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.isabella.firstapp.R
-import com.isabella.firstapp.databinding.FragmentCalculoBinding
+import com.isabella.firstapp.databinding.FragmentPessoaBinding
 import com.isabella.firstapp.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -27,8 +27,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnCalculo.setOnClickListener{
-            findNavController().navigate(R.id.calculoFragment)
+        binding.btnCadastroPessoa.setOnClickListener{
+            findNavController().navigate(R.id.allPessoasFragment)
         }
 
         binding.btnVerifica.setOnClickListener{

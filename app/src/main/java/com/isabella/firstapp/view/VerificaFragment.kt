@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.isabella.firstapp.R
-import com.isabella.firstapp.databinding.FragmentCalculoBinding
+import com.isabella.firstapp.databinding.FragmentPessoaBinding
 import com.isabella.firstapp.databinding.FragmentVerificaBinding
 
 
@@ -19,7 +19,7 @@ class VerificaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-      _binding = FragmentVerificaBinding.inflate(inflater, container, false)
+        _binding = FragmentVerificaBinding.inflate(inflater, container, false)
         return binding.root
     }
 
