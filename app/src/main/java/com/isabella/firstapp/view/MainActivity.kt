@@ -13,17 +13,24 @@ import java.security.AccessController
 
 class MainActivity : AppCompatActivity() {
 
+    // criar a toolbar
     private lateinit var AppBarConfiguration: AppBarConfiguration
+
+    //criar a navegação
     private lateinit var navController: NavController
 
+    //criar o binding
     private var _binding: ActivityMainBinding? = null
     private val binding: ActivityMainBinding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //configura o binding
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //configura a navegação e a toolbar
         val navHostFragment = supportFragmentManager.findFragmentById(binding.fragmentContainerView.id) as NavHostFragment
         navController = navHostFragment.navController
         AppBarConfiguration = AppBarConfiguration(navController.graph)

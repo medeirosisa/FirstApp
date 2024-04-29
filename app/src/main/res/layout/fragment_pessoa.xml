@@ -6,6 +6,27 @@
     tools:context=".view.PessoaFragment"
     android:orientation="vertical">
 
+    <RadioGroup
+        android:id="@+id/rgSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Masculino"/>
+
+        <RadioButton
+            android:id="@+id/rbFeminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Feminino"/>
+
+    </RadioGroup>
 
     <EditText
         android:id="@+id/edtNome"
@@ -24,15 +45,6 @@
         android:layout_margin="18dp"
         android:maxLength="4" />
 
-    <EditText
-        android:id="@+id/edtSexo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Digite seu sexo!"
-        android:inputType="text"
-        android:layout_margin="18dp"
-        android:maxLength="4" />
-
     <Button
         android:id="@+id/btnEnviar"
         android:layout_width="wrap_content"
@@ -40,6 +52,14 @@
         android:text="Enviar"
         android:layout_gravity="center"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnDeletar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="excluir"
+        android:layout_marginTop="20dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"/>
 
 
 </LinearLayout>

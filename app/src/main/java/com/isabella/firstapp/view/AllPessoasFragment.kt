@@ -43,6 +43,14 @@ class AllPessoasFragment : Fragment() {
 
         }
 
+        //quando clicar em algum item da lista
+        adapter = PessoaAdapter(viewModel.pessoaList.value) {pessoa ->
+            val pessoaBundle = Bundle()
+            pessoaBundle.putInt("pessoaId", pessoa.id)
+            arguments = pessoaBundle
+            findNavController().navigate(R.id.pessoaDetailFragment,arguments)
+        }
+
         //Cofigurar a recycler
         val recycler = binding.rvPessoas
         recycler.layoutManager = LinearLayoutManager(requireContext())
@@ -53,7 +61,7 @@ class AllPessoasFragment : Fragment() {
             adapter.updatePessoas(it)
         }
 
-        //Navegar para tela de cadstro de pessoas
+        //Navegar para tela de cadastro de pessoas
         binding.btnAdd.setOnClickListener{
             findNavController().navigate(R.id.pessoaFragment)
         }
